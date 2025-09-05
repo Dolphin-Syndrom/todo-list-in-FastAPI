@@ -3,6 +3,7 @@
 venv/
 ENV/
 env/
+crud/
 
 # Python cache
 __pycache__/
