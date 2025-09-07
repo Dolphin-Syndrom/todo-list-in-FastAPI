@@ -20,7 +20,8 @@ async def create_todo(todo: TodoModel):
     try:
         new_todo = todo.model_dump()
         result = todos_collection.insert_one(new_todo)
-        return {"_id": str(result.inserted_id), **new_todo}
+        created_todo = {"_id": result.inserted_id, **new_todo}
+        return serialize_document(created_todo)
     except Exception as e:
         raise HTTPException(status_code=500, detail="Database insertion error")
 
