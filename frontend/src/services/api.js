@@ -11,26 +11,26 @@ const api = axios.create({
 
 export const todoAPI = {
     getAllTodos: async () => {
-        const response = await api.get('/todos/');
+        const response = await api.get('/todo/');
         return response.data;
 },
 
-getTodoById: async (id) => {
-    const response = await api.get(`/todos/${id}/`);
+    getTodoById: async (id) => {
+        const response = await api.get(`/todo/${id}/`);
     return response.data;
 },
 
 createTodo: async (todo) => {
-    const response = await api.post('/todos/', todo);
+    const response = await api.post('/todo/', todo);
     return response.data;
 },
 
 updateTodo: async (id, todo) => {
-    const response = await api.put(`/todos/${id}/`, todo);
+    const response = await api.put(`/todo/${id}/`, todo);
     return response.data;
 },
 
 deleteTodo: async (id) => {
-    await api.delete(`/todos/${id}/`);
+    await api.delete(`/todo/${id}/`);
 },
 };
