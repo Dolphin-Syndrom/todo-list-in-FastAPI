@@ -13,7 +13,7 @@ A full-stack todo list application built with FastAPI, React, and MongoDB.
 
 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/Dolphin-Syndrom/todo-list-in-FastAPI.git
 cd todo-list-in-FastAPI
 ```
 
