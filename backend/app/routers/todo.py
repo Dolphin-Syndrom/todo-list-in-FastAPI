@@ -25,7 +25,7 @@ async def create_todo(todo: TodoModel):
     except Exception as e:
         raise HTTPException(status_code=500, detail="Database insertion error")
 
-@router.get("/todos")
+@router.get("/todo")
 async def get_todos():
     try:
         todos = list(todos_collection.find())
